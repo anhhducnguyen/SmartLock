@@ -1,0 +1,7 @@
+Chân COM: Là chân chung, kết nối với nguồn điện.
+Chân NO: Kết nối với thiết bị điều khiển, chỉ có dòng điện khi relay được kích hoạt.
+Khi relay không hoạt động: COM và NO không nối (mạch hở).
+Khi relay hoạt động: COM và NO nối với nhau (mạch đóng), cho phép dòng điện đi qua và cấp điện cho thiết bị.
+DC+ và DC- cung cấp nguồn cho cuộn dây relay để chuyển đổi trạng thái.
+IN là tín hiệu điều khiển kích hoạt relay.
+Chân IN cần có tín hiệu để cho phép dòng điện từ DC+ và DC- hoạt động và chuyển đổi trạng thái của relay
