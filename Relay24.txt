@@ -1,0 +1,33 @@
+Relay SLA-24VDC-SL_C là một loại relay điện từ 24V DC, và thường có các chân sau:
+
+1. COM (Common)
+COM là chân chung, và nó là điểm kết nối chính giữa nguồn điện và tải (thiết bị bạn muốn điều khiển).
+Chân này luôn được kết nối với một dây nguồn (thường là dây dương của nguồn điện khi sử dụng với Solenoid Lock hay thiết bị khác).
+Khi relay được kích hoạt, COM sẽ được nối với NO hoặc NC (tùy vào loại relay và trạng thái của nó).
+2. NO (Normally Open - Thường Hở)
+NO là chân thường hở. Khi relay không được kích hoạt, chân NO và COM không được nối với nhau (mạch hở).
+Khi relay được kích hoạt (có tín hiệu từ chân IN), NO và COM được nối với nhau (mạch đóng), cho phép dòng điện đi qua và cấp điện cho thiết bị.
+NO là chân mà bạn thường sử dụng nếu muốn thiết bị chỉ hoạt động khi relay được kích hoạt (ví dụ như mở Solenoid Lock, bật đèn, hoặc kích hoạt một thiết bị khác).
+3. NC (Normally Closed - Thường Đóng)
+NC là chân thường đóng. Khi relay không được kích hoạt, chân NC và COM được nối với nhau (mạch đóng).
+Khi relay được kích hoạt, mạch giữa NC và COM sẽ mở, ngắt kết nối giữa hai chân này.
+NC được sử dụng khi bạn muốn thiết bị luôn hoạt động trừ khi relay được kích hoạt (ví dụ như tắt thiết bị khi có tín hiệu relay).
+4. IN (Input - Tín Hiệu Điều Khiển)
+IN là chân điều khiển. Chân này nhận tín hiệu điều khiển từ bộ vi điều khiển (như Arduino, Raspberry Pi), công tắc, hoặc thiết bị khác.
+Khi có tín hiệu cao (ví dụ: 5V hoặc 3.3V) đưa vào chân IN, relay sẽ được kích hoạt và thay đổi trạng thái của mạch giữa COM và NO/NC.
+Khi tín hiệu ở mức thấp (0V), relay sẽ không được kích hoạt, và mạch sẽ trở về trạng thái ban đầu (mở giữa COM và NO, đóng giữa COM và NC).
+5. DC+ (Nguồn Dương) và DC- (Nguồn Âm)
+Đây là các chân nguồn cấp cho cuộn dây của relay.
+DC+ kết nối với cực dương (+) của nguồn điện 24V DC.
+DC- kết nối với cực âm (-) của nguồn điện 24V DC.
+Nguồn này cấp điện cho cuộn dây bên trong relay, giúp nó chuyển đổi trạng thái khi nhận được tín hiệu từ chân IN.
+Tổng kết cách hoạt động:
+Khi bạn không kích hoạt relay (không có tín hiệu điều khiển ở chân IN):
+
+Mạch giữa COM và NO hở (không có dòng điện chạy qua).
+Mạch giữa COM và NC đóng (có dòng điện chạy qua, nếu bạn dùng NC).
+Khi bạn kích hoạt relay (có tín hiệu điều khiển ở chân IN):
+
+Mạch giữa COM và NO đóng (dòng điện sẽ chạy qua và thiết bị được cấp nguồn).
+Mạch giữa COM và NC hở (ngắt dòng điện giữa COM và NC).
+Relay giúp bạn kiểm soát các thiết bị có công suất lớn thông qua tín hiệu điều khiển từ các bộ vi điều khiển hoặc mạch điện có công suất nhỏ hơn.
